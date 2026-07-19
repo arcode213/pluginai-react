@@ -5,6 +5,30 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] — 2026-07-19
+
+Integration now needs only an API key and a workspace — the backend endpoint is
+built into the bundle and no longer appears in the documentation.
+
+### Changed
+
+- `baseUrl` is no longer part of the documented integration surface. It remains
+  supported as an optional override for self-hosting or proxying.
+- The default endpoint is compiled in and is no longer named in the README,
+  the props table, or any example.
+
+### Removed
+
+- `DEFAULT_BASE_URL` is no longer exported from the package entry point. It is
+  internal configuration, not part of the public API. Technically a breaking
+  change, released as a minor because 1.0.0 was live for under an hour with no
+  dependents.
+
+### Added
+
+- Test coverage asserting the built-in endpoint is used when `baseUrl` is
+  omitted.
+
 ## [1.0.0] — 2026-07-19
 
 First public release.
