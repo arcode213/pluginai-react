@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+playground/node_modules/
+playground/dist/
+*.tgz
+*.log
+.DS_Store
+.env
+.env.local
+verify/
